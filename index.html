@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mento Ecosystem - 4CNO Interface</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+    body {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+      background: linear-gradient(135deg, #FFEB3B 20%, #F57C00 80%);
+      color: #1B1B1B;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #3F51B5;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #212121;
+      margin-top: 0.5rem;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 2rem;
+      width: 100%;
+      max-width: 1100px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 16px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+      position: relative;
+    }
+    .card:hover {
+      transform: scale(1.07);
+    }
+    .card img {
+      width: 120px;
+      margin-bottom: 1rem;
+      user-select: none;
+    }
+    .card h2 {
+      color: #283593;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
+    .card p {
+      font-size: 1rem;
+      color: #424242;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+    .btn {
+      background: #FF6F00;
+      color: white;
+      font-weight: 700;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: background 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: #ef6c00;
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #212121;
+      text-align: center;
+    }
+    /* Ghibli-art inspired floating shapes */
+    .floating-art {
+      position: absolute;
+      width: 80px;
+      opacity: 0.2;
+      animation: float 6s ease-in-out infinite;
+      pointer-events: none;
+      user-select: none;
+    }
+    .art1 { top: 10px; left: 10px; animation-delay: 0s;}
+    .art2 { bottom: 20px; right: 40px; animation-delay: 2.5s;}
+    .art3 { top: 150px; right: 120px; animation-delay: 5s;}
+    @keyframes float {
+      0%, 100% { transform: translateY(0);}
+      50% { transform: translateY(-15px);}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mento Ecosystem - 4CNO</h1>
+    <p>Connect, Create, Network, Optimize with decentralized stablecoins and AI-powered finance</p>
+  </header>
+
+  <div class="container">
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Link_icon.svg/120px-Link_icon.svg.png" alt="Connect Icon" />
+      <h2>Connect</h2>
+      <p>Build bridges across borders with Mento's decentralized stablecoins. Low-cost, instant cross-currency transfers without intermediaries.</p>
+      <a href="https://www.mento.org" target="_blank" class="btn">Explore Mento</a>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Totoro_Junior.png/80px-Totoro_Junior.png" class="floating-art art1" alt="Ghibli Art" />
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Lightbulb_icon.svg/120px-Lightbulb_icon.svg.png" alt="Create Icon" />
+      <h2>Create</h2>
+      <p>Mint your own stablecoins securely with Mento's over-collateralized, transparent smart contracts. Powered by AI to maintain stability.</p>
+      <a href="https://docs.mento.org" target="_blank" class="btn">Get Started</a>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/No_Face.svg/80px-No_Face.svg.png" class="floating-art art2" alt="Ghibli Art" />
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Network_icon.svg/120px-Network_icon.svg.png" alt="Network Icon" />
+      <h2>Network</h2>
+      <p>Join a global, growing community empowered by MENTO governance tokens. Collaborate, vote, and build the future of DeFi FX.</p>
+      <a href="https://x.com/mentolabs" target="_blank" class="btn">Join Community</a>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Catbus_icon.svg/80px-Catbus_icon.svg.png" class="floating-art art3" alt="Ghibli Art" />
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Speed_icon.svg/120px-Speed_icon.svg.png" alt="Optimize Icon" />
+      <h2>Optimize</h2>
+      <p>Access professional-grade trading and liquidity tools to optimize your stablecoin portfolio and earn yield in DeFi.</p>
+      <a href="https://www.mento.org/earn" target="_blank" class="btn">Start Earning</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>Built to empower global finance with decentralized stablecoins and AI innovation. Powered by MENTO community governance.</p>
+  </footer>
+</body>
+</html>
