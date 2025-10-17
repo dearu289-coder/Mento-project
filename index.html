@@ -6,32 +6,75 @@
   <title>Mento Ecosystem - 4CNO Interface</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+    
     body {
       margin: 0;
       font-family: 'Nunito', sans-serif;
-      background: linear-gradient(135deg, #FFEB3B 20%, #F57C00 80%);
-      color: #1B1B1B;
+      background: radial-gradient(circle at top left, #3B82F6, #9333EA, #F43F5E);
+      color: #E5E7EB;
       display: flex;
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
       padding: 20px;
+      overflow-x: hidden;
     }
+
     header {
       text-align: center;
       margin-bottom: 2rem;
+      position: relative;
+      width: 100%;
+      max-width: 1100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+    }
+    
+    header img.logo {
+      height: 50px;
+      user-select: none;
+      filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.4));
     }
     header h1 {
       font-size: 3rem;
       font-weight: 800;
-      color: #3F51B5;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+      color: #FFF;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      margin: 0;
     }
     header p {
       font-size: 1.2rem;
-      color: #212121;
-      margin-top: 0.5rem;
+      color: #ddd;
+      margin-top: 0.25rem;
     }
+
+    .social-icons {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      gap: 20px;
+    }
+    .social-icons a {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      filter: brightness(0.8);
+      transition: filter 0.3s ease;
+    }
+    .social-icons a:hover {
+      filter: brightness(1.2) drop-shadow(0 0 6px #FFF);
+    }
+    .social-icons img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      user-select: none;
+    }
+
     .container {
       display: grid;
       grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
@@ -40,36 +83,39 @@
       max-width: 1100px;
     }
     .card {
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.1);
       border-radius: 16px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
       padding: 2rem;
       text-align: center;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, background 0.3s ease;
       position: relative;
     }
     .card:hover {
       transform: scale(1.07);
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 15px 40px rgba(255,255,255,0.3);
     }
     .card img {
       width: 120px;
       margin-bottom: 1rem;
       user-select: none;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
     }
     .card h2 {
-      color: #283593;
+      color: #E0E7FF;
       margin-bottom: 1rem;
       font-weight: 700;
       font-size: 1.8rem;
     }
     .card p {
       font-size: 1rem;
-      color: #424242;
+      color: #CBD5E1;
       line-height: 1.5;
       margin-bottom: 1.5rem;
     }
     .btn {
-      background: #FF6F00;
+      background: #8B5CF6;
       color: white;
       font-weight: 700;
       padding: 0.75rem 1.5rem;
@@ -82,19 +128,20 @@
       display: inline-block;
     }
     .btn:hover {
-      background: #ef6c00;
+      background: #7C3AED;
+      box-shadow: 0 0 12px #A78BFA;
     }
     footer {
       margin-top: 3rem;
       font-size: 0.9rem;
-      color: #212121;
+      color: #d1d5db;
       text-align: center;
     }
-    /* Ghibli-art inspired floating shapes */
+    /* Ghibli-inspired floating shapes */
     .floating-art {
       position: absolute;
       width: 80px;
-      opacity: 0.2;
+      opacity: 0.15;
       animation: float 6s ease-in-out infinite;
       pointer-events: none;
       user-select: none;
@@ -110,8 +157,16 @@
 </head>
 <body>
   <header>
+    <img src="https://www.mento.org/static/media/mento-logo.87d13a4e.svg" alt="Mento Logo" class="logo" />
     <h1>Mento Ecosystem - 4CNO</h1>
-    <p>Connect, Create, Network, Optimize with decentralized stablecoins and AI-powered finance</p>
+    <div class="social-icons">
+      <a href="https://discord.gg/mento" target="_blank" title="Join Mento Discord">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Discord Icon" />
+      </a>
+      <a href="https://x.com/mentolabs" target="_blank" title="Follow Mento on X">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="X Icon" />
+      </a>
+    </div>
   </header>
 
   <div class="container">
@@ -154,3 +209,4 @@
   </footer>
 </body>
 </html>
+
